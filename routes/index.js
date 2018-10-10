@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/contact', (req, res) => {
-  res.render('common/contact',{ title: 'contact'});
+  res.render('common/contact', { title: 'contact'});
 });
 
 router.get('/about', (req, res) => {
