@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = require('./routes');
-const serviceRoutes = require('./routes/service').default;
+const serviceRoutes = require('./routes/service');
 
 const app = express();
 
