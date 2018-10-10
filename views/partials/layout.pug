@@ -2,3 +2,26 @@ include header
 
 block content
 
+//- landing header
+header.primary
+    .container
+        .header-nav
+            .col-sm-3
+                .nav-brand
+                    +img("logo.png")(alt="brand-image")
+            .col-sm-9
+                .nav-menu
+                    ul.pull-right
+                        li
+                            +anchor("Home")
+                        li
+                            +anchor("About")
+                        li
+                            +anchor("Services")
+                        li
+                            +anchor("Blog")
+                        li
+                            +anchor("Contact")
+
+
+
