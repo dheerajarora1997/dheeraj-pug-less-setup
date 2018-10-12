@@ -30,11 +30,11 @@ router.get('/single-car-carrier', (req, res) => {
   res.render('service/single-car-carrier');
 });
 
-router.get('/services/storage', (req, res) => {
+router.get('/storage', (req, res) => {
   res.render('service/storage');
 });
 
-router.get('/services/warehouse', (req, res) => {
+router.get('/warehouse', (req, res) => {
   res.render('service/warehouse');
 });
 
