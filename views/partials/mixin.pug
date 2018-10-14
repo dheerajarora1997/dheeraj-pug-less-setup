@@ -1,11 +1,62 @@
 mixin anchor(myAnchor, link)
     a(href = link )&attributes(attributes) #{myAnchor}
-  
+
 mixin button(myButton)
     button&attributes(attributes) #{myButton}
 
 mixin img(myImage)
     img(src='dist/' + myImage, aria-hidden='true')&attributes(attributes)
+
+mixin logo
+    +img("logo.png")(alt="brand-image", class="img-responsive")
+
+mixin PrimaryNav
+    nav.navbar.pull-right
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            #myNavbar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        +anchor("Home", '/')
+                    li
+                        +anchor("About", '/about')
+                    li.dropdown
+                        +anchor("Services")(data-toggle='dropdown', class="dropdown-toggle")
+                        ul.dropdown-menu
+                            li
+                                a(href='#') Page 1-1
+                            li
+                                a(href='#') Page 1-2
+                            li
+                                a(href='#') Page 1-3
+                    li
+                        +anchor("Blog", '/blog')
+                    li
+                        +anchor("Testimonial", '/testimonial')
+                    li
+                        +anchor("Contact", '/contact')
+
+mixin ServiceNav
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+    li
+        +anchor('Packers & Movers','services/packers-and-movers')
+
 
 mixin header
     header.primary
@@ -13,17 +64,17 @@ mixin header
             .header-nav
                 .col-sm-3
                     .nav-brand
-                        +img("logo.png")(alt="brand-image", class="img-responsive")
+                        +logo
                 .col-sm-9
-                    .nav-menu
-                        ul.pull-right
-                            li
-                                +anchor("Home", '/')
-                            li
-                                +anchor("About", '/about')
-                            li
-                                +anchor("Services", '/services')
-                            li
-                                +anchor("Blog", '/blog')
-                            li
-                                +anchor("Contact", '/contact')
+                    +PrimaryNav
+
+mixin footer
+    footer
+        .container
+            .row
+                .col-md-3.col-sm-6.col-xs-12
+                    +widget
+                .col-md-3.col-sm-6.col-xs-12
+                    +widget
+                .col-md-3.col-sm-6.col-xs-12
+                    +widget
