@@ -1,20 +1,30 @@
 header {
-  .full-width();
-  float: left;
-  padding: 10px 0;
-  background: #f1f1f1;
-  .header-nav {
     .full-width();
-  }
-  .nav-menu {
-    .full-width();
-    .pull-left();
-  }
-  &.primary {
-    background-image: url("");
-  }
-  &.fixed-header {
-    position: fixed;
-    top: 0;
-  }
+    float: left;
+    padding: 10px 0;
+    background: #f1f1f1;
+    .header-nav {
+        .pull-left();
+        .full-width();
+    }
+    .nav-menu {
+        .full-width();
+        .pull-left();
+    }
+    &.primary {
+        min-height: 680px;
+        background: url("../dist/banner.jpg") no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        .header-nav {
+            background: #fff;
+        }
+    }
+    &.fixed-header {
+        .header-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    }
 }
