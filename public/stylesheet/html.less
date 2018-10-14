@@ -1,0 +1,121 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: @grey-darker;
+  font-size: 13px;
+  font-family: @primary-font;
+  overflow-x: hidden;
+  text-align: left;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 * {
+  font-family: @primary-font;
+}
+
+p {
+  margin: 0;
+}
+
+strong {
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  color: @brand-info;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus {
+    color: @brand-info;
+    text-decoration: none;
+  }
+}
+
+.text-link-decoration {
+  text-decoration: underline;
+}
+
+a:active {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+a:focus {
+  outline: none !important;
+  /* outline: 1px solid #00698c !important;
+	outline-offset: 3px !important;
+	text-decoration: none !important; */
+}
+
+textarea {
+  resize: none;
+}
+
+// button:hover {
+// 	text-decoration: underline;
+// }
+button:active {
+  outline: none;
+  text-decoration: none !important;
+}
+
+button:focus {
+  outline: none;
+  /* outline: 1px solid #00698c !important;
+	outline-offset: 3px !important;
+	text-decoration: none !important; */
+}
+
+input:focus {
+  outline: none;
+}
+
+ul li,
+ol li {
+  margin: 0;
+  list-style: none;
+}
+
+ol {
+  margin: 0;
+  padding-left: 0px;
+}
+
+ol li ol {
+  padding-left: 20px;
+}
+
+ol {
+  counter-reset: item;
+}
+
+ol li {
+  display: block;
+  color: @brand-info;
+}
+
+ol li:before {
+  content: counters(item, ".");
+  counter-increment: item;
+}
+
+ol li span {
+  color: @grey-darker;
+  padding-left: 8px;
+}

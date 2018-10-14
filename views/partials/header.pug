@@ -1,13 +1,24 @@
+include layout
 
-include mixin
-link(rel='stylesheet/less', type='text/css', href='stylesheet/style.less')
+block content
 
-script(src='//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js')
-
-meta(name='viewport', content='width=device-width, initial-scale=1')
-
-link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-
-title #{title}
+//- landing header
+header.primary
+    .container
+        .header-nav
+            .col-sm-3
+                .nav-brand
+                    +img("logo.png")(alt="brand-image", class="img-responsive")
+            .col-sm-9
+                .nav-menu
+                    ul.pull-right
+                        li
+                            +anchor("Home", '/')
+                        li
+                            +anchor("About", '/about')
+                        li
+                            +anchor("Services", '/services')
+                        li
+                            +anchor("Blog", '/blog')
+                        li
+                            +anchor("Contact", '/contact')
