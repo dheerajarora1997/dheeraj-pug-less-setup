@@ -3,22 +3,3 @@ include layout
 block content
 
 //- landing header
-header.primary
-    .container
-        .header-nav
-            .col-sm-3
-                .nav-brand
-                    +img("logo.png")(alt="brand-image", class="img-responsive")
-            .col-sm-9
-                .nav-menu
-                    ul.pull-right
-                        li
-                            +anchor("Home", '/')
-                        li
-                            +anchor("About", '/about')
-                        li
-                            +anchor("Services", '/services')
-                        li
-                            +anchor("Blog", '/blog')
-                        li
-                            +anchor("Contact", '/contact')
