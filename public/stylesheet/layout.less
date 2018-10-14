@@ -1,30 +1,31 @@
 header {
+  .full-width();
+  float: left;
+  padding: 10px 0;
+  background: #f1f1f1;
+  .header-nav {
+    .pull-left();
     .full-width();
-    float: left;
-    padding: 10px 0;
-    background: #f1f1f1;
+  }
+  .nav-menu {
+    .full-width();
+    .pull-left();
+  }
+  &.primary {
+    min-height: 680px;
+    background: url("../dist/banner.jpg") no-repeat;
+    background-size: cover;
+    background-position: 0 0;
     .header-nav {
-        .pull-left();
-        .full-width();
+      background: #fff;
     }
-    .nav-menu {
-        .full-width();
-        .pull-left();
+  }
+  &.fixed-header {
+    .header-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
     }
-    &.primary {
-        min-height: 680px;
-        background: url("../dist/banner.jpg") no-repeat;
-        background-size: cover;
-        background-position: 0 0;
-        .header-nav {
-            background: #fff;
-        }
-    }
-    &.fixed-header {
-        .header-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-    }
+  }
 }
