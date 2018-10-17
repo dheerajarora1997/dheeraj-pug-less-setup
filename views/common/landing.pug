@@ -2,17 +2,17 @@ include ../partials/layout
 
 block content
   +header
-  section.landing-page
-    .landing-blog
+  .landing-page
+    section.landing-blog
       .container
         .mid-container
           .row
             +landing-blog-item
             +landing-blog-item
             +landing-blog-item            
-    .landing-service-list
+    section.landing-service-list
       .container
-        defaultmid-container
+        .mid-container
           h3 We are here to serve you the best
           p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
           .row
@@ -24,7 +24,7 @@ block content
             +landing-service-item
             +landing-service-item
             +landing-service-item
-    .banner-section
+    section.banner-section
       .container
         .mid-container
           h3 Where does it come from
