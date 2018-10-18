@@ -9,6 +9,6 @@ app.use(express.static('public'));
 app.use(routes);
 app.use('/services', serviceRoutes);
 
-app.listen(9999, () => {
+app.listen(process.env.PORT || 9999, () => {
   console.log('server started at port 9999, open webpage at localhost:9999');
 });
