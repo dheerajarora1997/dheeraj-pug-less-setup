@@ -13,3 +13,8 @@ mixin landing-service-item
             p
                 strong Service Name
             span.text-small Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+mixin loop
+    ul
+        each val, index in {1:'one',2:'two',3:'three'}
+            li= index + ":" + val

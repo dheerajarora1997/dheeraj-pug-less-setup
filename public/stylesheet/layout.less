@@ -19,6 +19,22 @@
   border: 1px solid @brand-secondary;
 }
 
+.fixed-btn {
+  .hidden();
+  .pull-left();
+  .full-width();
+  .text-center();
+  padding: 8px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: @white;
+  background-color: @brand-primary;
+  @media @device-xs-all {
+    display: block !important;
+  }
+}
+
 .material-input {
   .border-radius(0);
   background: rgba(255, 255, 255, 0.3);
@@ -62,6 +78,55 @@ header {
       top: 0;
       left: 0;
       z-index: 9;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+footer {
+  .pull-left();
+  .full-width();
+  padding: 20px 0 30px;
+  background: @grey-darker;
+  color: @white;
+  .widget {
+    .pull-left();
+    .full-width();
+    padding: 0 20px;
+    @media @device-xs-all {
+      padding: 0 0 20px;
+    }
+  }
+  ul {
+    .pull-left();
+    .full-width();
+    li {
+      .pull-left();
+      .full-width();
+      list-style-type: none;
+      a {
+        .pull-left();
+        .full-width();
+        padding: 5px 0;
+      }
+    }
+    &.social-links {
+      li {
+        width: auto;
+        margin: 0 10px 0 0;
+        a {
+          .primary-btn();
+          border: 1px solid @brand-primary;
+          padding: 10px 5px;
+          &:hover {
+            .default-btn();
+            padding: 10px 5px;
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }

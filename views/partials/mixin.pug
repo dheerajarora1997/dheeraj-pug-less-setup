@@ -264,8 +264,10 @@ mixin graphic-icon
 mixin logo
     +img("logo.png")(alt="brand-image", class="img-responsive")
 
+mixin aboutMeta
+    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
 mixin PrimaryNav
-    nav.navbar.pull-right
+    nav.navbar.pull-right#sidebar-wrapper(role="navigation")
         .navbar-header
             button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
                 span.icon-bar
@@ -294,41 +296,69 @@ mixin PrimaryNav
                         +anchor("Contact", '/contact')
 
 mixin ServiceNav
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
-    li
-        +anchor('Packers & Movers','services/packers-and-movers')
+    ul.services-link
+        .row.no-gutter
+            .col-xs-6
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
+            .col-xs-6
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
+                li
+                    +anchor('Packers & Movers','services/packers-and-movers')
 
+mixin socialNav
+    ul.social-links
+        li
+            a(href="javascript:void(0);") 
+                i.fa.fa-facebook(aria-hidden="true")
+        li
+            a(href="javascript:void(0);") 
+                i.fa.fa-twitter(aria-hidden="true")
+        li
+            a(href="javascript:void(0);") 
+                i.fa.fa-linkedin(aria-hidden="true")
+        li
+            a(href="javascript:void(0);") 
+                i.fa.fa-instagram(aria-hidden="true")
 
 mixin header
     header.primary
         .container
             .header-nav
-                .col-sm-3
+                .col-sm-3.col-xs-9
                     .nav-brand
                         +logo
-                .col-sm-9
+                .col-sm-9.col-xs-3.no-padding-right
                     +PrimaryNav
-
 mixin footer
     footer
         .container
             .row
-                .col-md-3.col-sm-6.col-xs-12
-                    +widget
-                .col-md-3.col-sm-6.col-xs-12
-                    +widget
-                .col-md-3.col-sm-6.col-xs-12
-                    +widget
+                .col-sm-4.col-xs-12
+                    +widget("about")
+                .col-sm-4.col-xs-12
+                    +widget("services")
+                .col-sm-4.col-xs-12
+                    +widget("social")
+mixin widget(detail)
+    .widget
+        if detail == "about"
+            +logo
+            +aboutMeta
+        if detail == "services"
+            h4 Services
+            +ServiceNav
+        if detail == "social"
+            h4 Stay Connected
+            +socialNav
