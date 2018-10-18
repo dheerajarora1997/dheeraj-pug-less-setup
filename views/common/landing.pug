@@ -27,9 +27,45 @@ block content
     section.banner-section
       .container
         .mid-container
-          h3 Where does it come from
-          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          h3.text-center Where does it come from
+          p.text-center Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
           +button("Contact Now")(class="default-btn")
+    section.about-content
+      .container
+        .mid-container
+          .row
+            .col-sm-6.col-xs-12
+              .about-left
+                h3 About Us
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                +anchor("Read More")(class="primary-btn")
+            .col-sm-6.col-xs-12
+              .about-right
+                +graphic-icon
+    section.form-content
+      .container
+        .mid-container
+          h2.text-center Let Us Help You To Find a Solution For Your Needs
+          p.text-center Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
+          .landing-form
+            .row
+              .col-sm-4.col-xs-12
+                .form-group
+                  input(type="text", class="material-input form-control", placeholder="Name*", required)
+              .col-sm-4.col-xs-12
+                .form-group
+                  input(type="text", class="material-input form-control", placeholder="Email*", required)
+              .col-sm-4.col-xs-12
+                .form-group
+                  input(type="text", class="material-input form-control", placeholder="Contact No*", required)
+              .col-xs-12
+                .form-group
+                  textarea(placeholder="Your Message Here", class="material-input form-control", rows="8")
+              .col-xs-12
+                input(type="submit", class="primary-btn", value="Send")
+                +button("Cancel")(class="secondary-btn")
+ 
+
 
 
             
