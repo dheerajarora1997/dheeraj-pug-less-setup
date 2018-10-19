@@ -19,6 +19,21 @@
   border: 1px solid @brand-secondary;
 }
 
+.scroll-arrow {
+  .no-border();
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 50px;
+  right: 10px;
+  padding: 10px;
+  text-align: center;
+  background: @brand-primary;
+  color: @white;
+  font-size: 20px;
+  display: none;
+}
+
 .fixed-btn {
   .hidden();
   .pull-left();
@@ -48,8 +63,14 @@
 header {
   .full-width();
   float: left;
-  padding: 10px 0;
+  padding: 10px 40px;
   background: #f1f1f1;
+  @media @device-xs-all {
+    padding: 10px 20px;
+  }
+  @media @device-sm {
+    padding: 10px 20px;
+  }
   .header-nav {
     .pull-left();
     .full-width();
@@ -73,6 +94,7 @@ header {
       height: 100%;
       height: 500px;
       top: 0;
+      left: 0;
       position: absolute;
       background-color: rgba(0, 0, 0, 0.3);
     }
@@ -119,10 +141,13 @@ footer {
       li {
         width: auto;
         margin: 0 10px 0 0;
+        @media @device-sm {
+          margin: 0 20px 0 0;
+        }
         a {
           .primary-btn();
           border: 1px solid @brand-primary;
-          padding: 10px 5px;
+          padding: 10px;
           &:hover {
             .default-btn();
             padding: 10px 5px;

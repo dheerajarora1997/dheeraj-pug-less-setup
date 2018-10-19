@@ -82,13 +82,14 @@ mixin socialNav
 
 mixin header
     header.primary
-        .container
-            .header-nav
-                .col-sm-3.col-xs-9
-                    .nav-brand
-                        +logo
-                .col-sm-9.col-xs-3.no-padding-right
-                    +PrimaryNav
+        .header-nav
+            .container
+                .row.no-gutter
+                    .col-sm-3.col-xs-9
+                        .nav-brand
+                            +logo
+                    .col-sm-9.col-xs-3.no-padding-right
+                        +PrimaryNav
 mixin footer
     footer
         .container

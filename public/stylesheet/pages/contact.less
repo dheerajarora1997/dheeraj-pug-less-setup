@@ -1,9 +1,22 @@
 .contact-content {
   .pull-left();
   .full-width();
+  padding: 60px 0;
+  h4 {
+    .pull-left();
+    .full-width();
+    margin: 0 0 20px;
+  }
+  p {
+    .pull-left();
+    .full-width();
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
   .social-links {
     .pull-left();
     .full-width();
+    margin: 10px 0 0;
     li {
       .pull-left();
       .full-width();
@@ -11,9 +24,11 @@
       margin: 0 10px 0 0;
       list-style: none;
       a {
+        .pull-left();
         .primary-btn();
+        width: 100%;
         border: 1px solid @brand-primary;
-        padding: 10px 5px;
+        padding: 10px 10px;
         &:first-child {
           margin-left: 0;
         }
