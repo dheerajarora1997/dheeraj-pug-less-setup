@@ -1,0 +1,29 @@
+.about-page {
+  .pull-left();
+  .full-width();
+  section {
+    .pull-left();
+    width: 100%;
+    padding: 40px 0;
+    .content-section {
+      .pull-left();
+      .full-width();
+      text-align: left;
+      padding: 5px 0;
+      p {
+        line-height: 1.6;
+      }
+    }
+    .icon-section {
+      .pull-left();
+      .full-width();
+      text-align: center;
+      svg {
+        width: 200px;
+      }
+    }
+    &:nth-of-type(even) {
+      background-color: #f9f9f9;
+    }
+  }
+}
