@@ -1,8 +1,8 @@
 include ../partials/layout
 
 block content
-  +header
   .landing-page
+    +header
     section.landing-blog
       .container
         .mid-container
@@ -47,23 +47,7 @@ block content
         .mid-container
           h2.text-center Let Us Help You To Find a Solution For Your Needs
           p.text-center Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
-          from.landing-form
-            .row
-              .col-sm-4.col-xs-12
-                .form-group
-                  input(type="text", class="material-input form-control", placeholder="Name*", required)
-              .col-sm-4.col-xs-12
-                .form-group
-                  input(type="text", class="material-input form-control", placeholder="Email*", required)
-              .col-sm-4.col-xs-12
-                .form-group
-                  input(type="text", class="material-input form-control", placeholder="Contact No*", required)
-              .col-xs-12
-                .form-group
-                  textarea(placeholder="Your Message Here", class="material-input form-control", rows="8")
-              .col-xs-12
-                input(type="submit", class="primary-btn", value="Send")
-                +button("Cancel")(class="secondary-btn")
+          +landing-form
     section.googleMaps
       #map
   +footer

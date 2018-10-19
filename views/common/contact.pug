@@ -1,6 +1,14 @@
 include ../partials/layout
 
 block content
-  h1 heading
-  +anchor("link")
-  +img('taylor.jpg')
+  .contact-page
+    +header
+    section.contact-content
+      .container
+        .row
+          .col-sm-6.col-xs-12
+            h4 Reach Us
+            +socialNav
+          .col-sm-6.col-xs-12
+            +contact-form
+    section.map-content

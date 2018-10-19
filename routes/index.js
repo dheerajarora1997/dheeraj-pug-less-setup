@@ -3,15 +3,21 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('common/landing', { title: 'HomePage' });
+  res.render('common/landing', {
+    title: 'HomePage'
+  });
 });
 
 router.get('/contact', (req, res) => {
-  res.render('common/contact', { title: 'contact' });
+  res.render('common/contact', {
+    title: 'contact'
+  });
 });
 
 router.get('/about', (req, res) => {
-  res.render('common/about');
+  res.render('common/about', {
+    title: 'about'
+  });
 });
 
 router.get('/portfolio', (req, res) => {
