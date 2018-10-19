@@ -24,12 +24,17 @@
   .pull-left();
   .full-width();
   .text-center();
-  padding: 8px 0;
+  padding: 10px 0;
   position: fixed;
   left: 0;
   bottom: 0;
   color: @white;
   background-color: @brand-primary;
+  &:focus,
+  &:active,
+  &:visited {
+    color: @white;
+  }
   @media @device-xs-all {
     display: block !important;
   }
@@ -86,7 +91,7 @@ header {
 footer {
   .pull-left();
   .full-width();
-  padding: 20px 0 30px;
+  padding: 20px 0 0;
   background: @grey-darker;
   color: @white;
   .widget {
@@ -128,5 +133,13 @@ footer {
         }
       }
     }
+  }
+  .copyright {
+    .pull-left();
+    .text-center();
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 10px 0;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.5);
   }
 }
