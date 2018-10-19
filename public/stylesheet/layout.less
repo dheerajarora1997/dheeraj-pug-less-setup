@@ -32,6 +32,7 @@
   color: @white;
   font-size: 20px;
   display: none;
+  z-index: 5;
 }
 
 .fixed-btn {
@@ -45,6 +46,7 @@
   bottom: 0;
   color: @white;
   background-color: @brand-primary;
+  z-index: 6;
   &:focus,
   &:active,
   &:visited {
@@ -86,6 +88,7 @@ header {
     background-position: 0 0;
     .header-nav {
       .relative();
+      z-index: 9;
       background: #fff;
     }
     &:before {

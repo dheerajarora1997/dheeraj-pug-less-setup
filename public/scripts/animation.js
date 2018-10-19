@@ -21,4 +21,11 @@ $(document).ready(function () {
       $('.scroll-arrow').fadeOut();
     }
   });
+  $(window).bind("resize", function () {
+    if ($(this).width() < 991) {
+      $('.timeline > li.inverted').removeClass('timeline-inverted')
+    } else {
+      $('.timeline > li.inverted').addClass('timeline-inverted')
+    }
+  }).trigger('resize');
 });
