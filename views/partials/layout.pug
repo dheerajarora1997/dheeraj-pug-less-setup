@@ -1,32 +1,27 @@
-head
-  include mixin
-
-  //- meta(property='og:title', content='Transport')
-  //- //- meta(property='og:type', content='video.movie')
-  //- //- meta(property='og:url', content='http://www.imdb.com/title/tt0117500/')
-  //- meta(property='og:image', content='http://ia.media-imdb.com/images/rock.jpg')
-
-  meta(name="theme-color" content="#009292")
-  //- link(rel="icon" sizes="192x192" href="nice-highres.png")
-
-  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-
-  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-
-  meta(name='viewport', content='width=device-width, initial-scale=1')
-
-  link(href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Open+Sans", rel="stylesheet")
-  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-  link(rel='stylesheet/less', type='text/css', href='stylesheet/style.less')
-  script(src='//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js')
-
-  script(src='scripts/google-map.js')
-  script(src='scripts/menu-fixed.js')
-  script(src='scripts/animation.js')
-
-  title #{title}
-body
-
+doctype html
+html
+  head
+    //- meta(property='og:title', content='Transport')
+    //- //- meta(property='og:type', content='video.movie')
+    //- //- meta(property='og:url', content='http://www.imdb.com/title/tt0117500/')
+    //- meta(property='og:image', content='http://ia.media-imdb.com/images/rock.jpg')
+    meta(name="theme-color" content="#009292")
+    //- link(rel="icon" sizes="192x192" href="nice-highres.png")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href="https://fonts.googleapis.com/css?family=Comfortaa|Montserrat|Open+Sans", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel='stylesheet/less', type='text/css', href='stylesheet/style.less')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js')
+    script(src='scripts/google-map.js')
+    script(src='scripts/menu-fixed.js')
+    script(src='scripts/animation.js')
+    title #{title}
+  body
+    block content
+    block modal
+    include mixin
 
 
 
