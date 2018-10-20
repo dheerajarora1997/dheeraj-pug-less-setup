@@ -21,11 +21,20 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/portfolio', (req, res) => {
-  res.render('common/portfolio');
+  res.render('common/portfolio', {
+    title: 'portfolio'
+  });
 });
 
 router.get('/testimonial', (req, res) => {
-  res.render('common/testimonial');
+  res.render('common/testimonial', {
+    title: 'Testimonial'
+  });
 });
 
+router.get('/services', (req, res) => {
+  res.render('common/services', {
+    title: 'services'
+  });
+});
 module.exports = router;
