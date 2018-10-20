@@ -9,6 +9,10 @@ app.use(express.static('public'));
 app.use(routes);
 app.use('/services', serviceRoutes);
 
+app.get('*', (req, res) => {
+  res.send('check your url');
+});
+
 app.listen(process.env.PORT || 9999, () => {
-  console.log('server started at port 9999, open webpage at 192.168.1.100:9999');
+  console.log('server started at port 9999');
 });
