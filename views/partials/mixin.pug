@@ -27,15 +27,11 @@ mixin PrimaryNav
                         +anchor("Home", '/')
                     li
                         +anchor("About", '/about')
-                    li.dropdown
+                    li.dropdown.main-menu
                         +anchor("Services")(data-toggle='dropdown', class="dropdown-toggle")
                         ul.dropdown-menu
-                            li
-                                a(href='#') Page 1-1
-                            li
-                                a(href='#') Page 1-2
-                            li
-                                a(href='#') Page 1-3
+                            +ServiceMenuItem
+                            
                     li
                         +anchor("Portfolio", '/portfolio')
                     li
@@ -45,25 +41,26 @@ mixin PrimaryNav
 
 mixin ServiceNav
     ul.services-link
-        .row.no-gutter
-            .col-xs-6
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
-            .col-xs-6
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
-                li
-                    +anchor('Packers & Movers','services/packers-and-movers')
+      +ServiceMenuItem  
+
+mixin ServiceMenuItem
+    li
+        +anchor("Packers and Movers","services/packers-and-movers")
+    li
+        +anchor("Home shifting","services/home-shifting")
+    li
+        +anchor("Corporate Relocation","services/corporate-relocation")
+    li
+        +anchor("Industrial relocation","services/industrial-relocation")
+    li
+        +anchor("Logistics","services/logistics")
+    li
+        +anchor("Single Car Carrier","services/single-car-carrier")
+    li
+        +anchor("Storage","services/storage")
+    li
+        +anchor("Warehouse","services/warehouse")
+
 
 mixin socialNav
     ul.social-links

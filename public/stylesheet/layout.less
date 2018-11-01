@@ -112,6 +112,13 @@ header {
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     }
   }
+  .dropdown.main-menu .dropdown-menu {
+    padding: 0;
+    a {
+      color: @brand-primary;
+      padding: 10px 20px;
+    }
+  }
 }
 
 footer {
@@ -120,6 +127,9 @@ footer {
   padding: 20px 0 0;
   background: @grey-darker;
   color: @white;
+  @media @device-xs-all {
+    padding-bottom: 30px;
+  }
   .widget {
     .pull-left();
     .full-width();
@@ -133,8 +143,17 @@ footer {
     .full-width();
     li {
       .pull-left();
-      .full-width();
+      width: 50%;
       list-style-type: none;
+      @media @device-xs-all {
+        width: 100%;
+      }
+      @media @device-sm {
+        width: 100%;
+      }
+      @media @device-md {
+        width: 100%;
+      }
       a {
         .pull-left();
         .full-width();

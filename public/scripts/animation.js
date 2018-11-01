@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   function addActive() {
     $(this).addClass("active");
   }
@@ -11,15 +11,14 @@ $(document).ready(function() {
   $(".scroll-arrow").on("click", returnToTopOfScreen);
 
   function returnToTopOfScreen() {
-    $("html, body").animate(
-      {
+    $("html, body").animate({
         scrollTop: 0
       },
       500
     );
   }
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 150) {
       $(".scroll-arrow").fadeIn();
     } else {
@@ -28,7 +27,7 @@ $(document).ready(function() {
   });
 
   $(window)
-    .bind("resize", function() {
+    .bind("resize", function () {
       if ($(this).width() < 991) {
         $(".timeline > li.inverted").removeClass("timeline-inverted");
       } else {
@@ -36,4 +35,25 @@ $(document).ready(function() {
       }
     })
     .trigger("resize");
+
+  function HeaderScroll() {
+    $("html, body").animate({
+        scrollTop: 460
+      },
+      500
+    );
+  }
+
+  if ($('div').hasClass('about-page')) {
+    HeaderScroll();
+  }
+  if ($('div').hasClass('portfolio-page')) {
+    HeaderScroll();
+  }
+  if ($('div').hasClass('testimonial-page')) {
+    HeaderScroll();
+  }
+  if ($('div').hasClass('contact-page')) {
+    HeaderScroll();
+  }
 });
