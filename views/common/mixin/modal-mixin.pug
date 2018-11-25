@@ -1,0 +1,31 @@
+mixin ModalCloseHeader
+    .modal-close
+        a(data-dismiss="modal", href="javascript:void(0);") &times;
+mixin ContactFormModal
+    .modal.default-modal.contact-form-popup#contact-form-modal(tabindex="-1", role="dialog")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h2 Contact Us
+                    +ModalCloseHeader
+                .modal-body
+                    form(action="")
+                        .row
+                            .col-sm-6.col-xs-12
+                                .form-group
+                                    input.material-input.form-control(type="text",  placeholder="NAME*", required)
+                            .col-sm-6.col-xs-12
+                                .form-group
+                                    input.material-input.form-control(type="email", placeholder="EMAIL*", required)
+                            .col-sm-6.col-xs-12
+                                .form-group
+                                    input.material-input.form-control(type="text", placeholder="SUBJECT")
+                            .col-sm-6.col-xs-12
+                                .form-group
+                                    input.material-input.form-control(type="text", placeholder="PHONE NO*",required)
+                            .col-xs-12
+                                .form-group
+                                    textarea.material-input.form-control(placeholder="Your message")
+                            .col-xs-12
+                                .pull-right
+                                    input.primary-btn(type="submit", value="SEND")
