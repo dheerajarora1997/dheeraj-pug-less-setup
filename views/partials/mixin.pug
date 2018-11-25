@@ -87,6 +87,9 @@ mixin header
                             +logo
                     .col-sm-9.col-xs-3.no-padding-right
                         +PrimaryNav
+            .header-content
+                h1 We welcome you to our transportation service
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
 mixin footer
     footer
         .container
@@ -100,6 +103,8 @@ mixin footer
             .mid-container
                 .copyright
                     p All Rights Reserved
+    +anchor("Call Now","tel:+919992993949")(class="fixed-btn")
+    +button("")(class="fa fa-angle-up scroll-arrow")
 mixin widget(detail)
     .widget
         if detail == "about"

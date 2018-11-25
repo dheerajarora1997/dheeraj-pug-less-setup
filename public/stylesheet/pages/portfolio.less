@@ -10,14 +10,27 @@
   .background-section {
     .pull-left();
     .full-width();
-    min-height: 300px;
-    background: @grey-darker;
+    min-height: 380px;
+    background-color: @grey-darker;
+    background-size: cover !important;
+    &.bike {
+      background: url("../dist/bike.jpg") no-repeat center;
+    }
+    &.car {
+      background: url("../dist/car.jpg") no-repeat center;
+    }
+    &.industry {
+      background: url("../dist/industry.jpg") no-repeat center;
+    }
+    &.super-car {
+      background: url("../dist/super-car.jpg") no-repeat center;
+    }
   }
   .content-section {
     .pull-left();
     .full-width();
     color: @white;
-    min-height: 300px;
+    min-height: 380px;
     padding: 65px 30px;
     background: @brand-primary;
     h4 {
