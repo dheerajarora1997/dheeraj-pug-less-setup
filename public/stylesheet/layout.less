@@ -108,12 +108,20 @@ header {
   }
   &.primary {
     min-height: 500px;
-    background: url("../dist/banner.jpg") no-repeat;
+    background: url("../dist/banner-small.jpg") no-repeat;
     background-size: cover;
     background-position: 0 0;
     position: relative;
-    @media @device-xs-all {
-      background-size: auto;
+    .hero-bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     .header-nav {
       .relative();
