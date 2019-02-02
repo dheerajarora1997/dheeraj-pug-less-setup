@@ -95,11 +95,18 @@ header {
     h1 {
       .pull-left();
       .full-width();
-      margin: 10px 0 15px;
+      margin: 15px 0 25px;
+      @media @device-xs-all{
+        margin: 10px 0 15px;
+      }
     }
     p {
-      .pull-left();
-      .full-width();
+      width: 75%;
+      float: none;
+      padding: 0;
+      margin: 10px auto;
+      @media @device-xs-all{
+      width: 100%;}
     }
     a {
       display: inline-block;
@@ -112,6 +119,12 @@ header {
     background-size: cover;
     background-position: 0 0;
     position: relative;
+    @media @device-xl{
+      min-height: 700px;
+    }
+    @media @device-xxl{
+      min-height: 700px;
+    }
     .hero-bg {
       width: 100%;
       min-height: 500px;
@@ -219,5 +232,28 @@ footer {
     margin: 20px 0 0;
     padding: 15px 0;
     border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+  }
+}
+.modal .modal-content{
+border-radius: 0;
+  .modal-header{
+    .pull-left();
+    width: 100%;
+    position: relative;
+    h3{
+      .pull-left();
+      .full-width();
+      font-size: 1.5em;
+      margin: 0;
+      font-weight: 500;
+    }
+    .modal-close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+      a{
+        color: #434343;
+        font-size: 15px;}
+    }
   }
 }
